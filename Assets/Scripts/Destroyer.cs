@@ -12,9 +12,9 @@ public class Destroyer : MonoBehaviour
     {
         if (other.gameObject.tag == "Plane")
         {
-            GameObject hi = other.gameObject;
+            GameObject ObjwctToBeSpawned = other.gameObject;
            
-            var spawnObject=Instantiate(hi);
+            var spawnObject=Instantiate(ObjwctToBeSpawned);
          Destroy(other.gameObject);
             spawnObject.transform.position = spawner.position;
         }
