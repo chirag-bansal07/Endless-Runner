@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    
-    // Update is called once per frame
+    public float speed;
+    public Transform Destroyer;
     void Update()
     {
-        this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z - 0.01f);
+        float step=speed* Time.deltaTime;
+        this.transform.position = Vector3.MoveTowards(transform.position, Destroyer.position, step); 
+           
     }
 }
