@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public Transform Destroyer;
     void Update()
     {
-        float step=speed* Time.deltaTime;
+        float step=speed* Time.fixedDeltaTime;
         this.transform.position = Vector3.MoveTowards(transform.position, Destroyer.position, step); 
            
     }

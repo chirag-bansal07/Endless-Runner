@@ -10,7 +10,7 @@ public class CharacterMovement : MonoBehaviour
     int index = 1;
     public float speed=5f;
     private Animator animator;
- 
+    public int score = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,13 +46,7 @@ public class CharacterMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, lane[index].transform.position, step);
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "Obstacle")
-        {
-         
-            animator.SetTrigger("Death");
-        }
-    }
+
+
+
 }
